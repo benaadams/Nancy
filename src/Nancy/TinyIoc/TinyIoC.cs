@@ -225,8 +225,6 @@ namespace Nancy.TinyIoc
             {
                 _padlock.ExitWriteLock();
             }
-
-            GC.SuppressFinalize(this);
         }
 
         #endregion
@@ -308,8 +306,6 @@ namespace Nancy.TinyIoc
                     item.Dispose();
                 }
             }
-
-            GC.SuppressFinalize(this);
         }
 
     #endregion
@@ -4067,8 +4063,6 @@ namespace Nancy.TinyIoc
                 disposed = true;
 
                 _RegisteredTypes.Dispose();
-
-                GC.SuppressFinalize(this);
             }
         }
 
